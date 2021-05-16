@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        div#area {
+            background-color: rgb(12, 131, 52);
+            font: normal 20pt arial;
+            width: 300px;
+            height: 300px;
+            line-height: 300px;
+            text-align: center;
+
+        }
+    </style>
+</head>
+<body>
+    <!--
+    <div id = 'area' onclick = 'clicar()'' onmouseenter = 'passar()'  onmouseout = 'sair()'>
+        Aqui trataríamos os eventos diretamente no HTML
+        Mais abaixo é apresentado o jeito de fazer no prórpio JS
+        Importante ressaltar que foi ensinado o Devtools do google chrome
+    -->
+    
+        <div id = 'area'>
+            Interaja...
+        </div>
+    <script>
+        var a = window.document.getElementById('area')
+        a.addEventListener('click', clicar)
+        a.addEventListener('mouseenter', passar)
+        a.addEventListener('mouseout', sair)
+        
+        function clicar() {                   
+            a.innerText = 'Clicou!'
+            a.style.background = 'red'
+        }
+        function passar() {
+            a.innerText = 'Mouse passando...'            
+        }
+        function sair() {
+            a.innerText = 'Saiu!'
+            a.style.background = 'green'
+        }
+
+    </script>
+</body>
+</html>

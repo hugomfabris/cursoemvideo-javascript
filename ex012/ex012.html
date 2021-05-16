@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multas</title>
+    <link rel="shortcut icon" href="carro.ico" type="image/x-icon">
+    <style>
+        h1 {background-color: rgb(20, 160, 160);
+        font: normal 30pt times;
+        text-align: center;}
+        input {background-color: rgb(236, 241, 241);}
+
+
+    </style>
+</head>
+<body>
+    <h1>Sistema de multas</h1>
+    Velocidade: <input type="number" name="txtvel" id="txtvel"> Km/h
+    <input type="button" value="Verificar" onclick="calcular()">
+    <script>
+        var txtvel = window.document.querySelector('input#txtvel')
+        function calcular(){
+            var vel = Number(txtvel.value)
+            if (vel > 80) {
+                window.document.write(`Sua velocidade é ${vel}, você está acima da velocidade permitida e será <strong>multado</strong>`)
+            
+
+            }
+            else {
+                window.document.write('Boa viagem!')
+            }
+        }
+    </script>
+</body>
+</html>

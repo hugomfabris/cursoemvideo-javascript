@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM primeiros passos</title>
+    <style>
+        body {
+            background-color: rgb(71, 130, 199);
+            font: arial 20pt;
+            color: white;
+
+        }
+    
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudo de DOM</h1>
+    <h2 id = aaa>Árvore <strong>DOM</strong>, discussões</h2>
+    <p>A estrutura se comporta como um fluxograma, no qual temos os ojetos "parents" dando origem aos objetos "child".
+    </p>
+    <p>No exemplo da aula o objeto window origina location, history, document. Este último por sua vez origina html, que origina vários outros. As tags dentro de tags serão consideradas os objetos que são os componentes da árvore dom. Podemos navegar de diversas maneiras pelos elementos das árvoes. </p>
+    <p>As seleções podem ser feitas, notavelmente, por: Marca, ID, Classo, Nome e Seletor. Os seletores ficam dentro das tags (no exemplo, da div) e as funções usadas são: getElementsBy___[] ou getElementBy().</p>
+    <p>Lembrete de aulas anteriores: o comando ctrl shift P serve para envelopar o texto, ganhando agilidade na digitação.</p>
+    <p></p>
+    <div name = 'msg'>Clique em mim!</div>
+    
+    <script>
+            window.document.write(window.document.URL)
+            var aaa = window.document.querySelector('h2#aaa')
+            aaa.style.color = 'black'
+            aaa.style.background =  'blue'
+            var z = window.document.getElementsByName('msg')[0]
+            z.style.background = 'purple'
+            /*
+           Formas de modificar o conteúdo da div em HTML via JS:
+            window.document.write(h2.innerHTML)
+            z.innerHTML = 'Eai meu consagrado'
+            z.innerText = 'ESSA FERA AI MEU'
+            window.document.write(h2.innerText)
+            Z.innerText = 'Olá'
+            Na primeira trazemos as tags junto, na segunda não.
+            */
+            
+        
+       </script>
+        
+</body>
+</html>
