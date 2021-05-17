@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hora do dia</title>
+    <style>
+        body {
+            background-color: rgb(121, 121, 211);
+            text-align: center;
+            font: normal 20pt arial;
+        }
+        h1 {
+            font: normal 25pt white;
+        }
+        
+        img#girassois {
+            height: 50pt;
+            width: 50pt;
+            border-radius: 50%;
+
+            
+
+        }
+    </style>
+</head>
+<body onload="carregar()">
+  <h1 id = 'titulo'>Hora do dia</h1> 
+  <div id = 'msg'> 
+
+  </div>
+  <div id = 'img'>
+      <img src="pordosoledit1.jpg" alt="">
+  <script>
+    function carregar() { 
+        var data = new Date()
+        var hora = String(data.getHours())
+        var min = String(data.getMinutes())
+        var msg = window.document.getElementById('msg')
+        var img = window.document.getElementById('img')
+        msg.innerText= (`Agora são ${hora}:${min} horas`)
+        if (hora < 12) {
+            document.body.style.background = '#e2cd9f'
+            if (min<10) {
+            min = '0'+min
+        }
+    }
+        else if (hora < 18 && hora >= 12) {
+            if (min<10) {
+            min = '0'+min
+    }
+}
+        else {
+            if (min < 10) {
+            min = '0'+min
+        }
+    }
+}
+  </script> 
+</body>
+</html>
